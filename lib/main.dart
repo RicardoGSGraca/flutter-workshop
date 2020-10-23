@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,5 +22,13 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Color cardColor;
+  final List<Color> colors = [Colors.white, Colors.orange, Colors.amber];
+  refreshColor() {
+    Color color = colors[Random().nextInt(colors.length)];
+    print('Changing color from $cardColor to $color');
+    cardColor = color;
   }
 }
